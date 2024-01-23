@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="550.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.BarangController">
+   <children>
+      <AnchorPane layoutY="6.0" prefHeight="550.0" prefWidth="199.0" style="-fx-background-color: #4e4e50;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Button layoutX="24.0" layoutY="320.0" mnemonicParsing="false" onAction="#Add_barang" prefHeight="40.0" prefWidth="146.0" style="-fx-background-color: #98FB98;" text="Tambah" textFill="WHITE">
+               <font>
+                  <Font name="Agency FB Bold" size="18.0" />
+               </font></Button>
+            <Button layoutX="24.0" layoutY="376.0" mnemonicParsing="false" onAction="#Edit" prefHeight="40.0" prefWidth="146.0" style="-fx-background-color: #FF7F50;" text="Ubah" textFill="WHITE">
+               <font>
+                  <Font name="Agency FB Bold" size="18.0" />
+               </font></Button>
+            <Button layoutX="24.0" layoutY="430.0" mnemonicParsing="false" onAction="#Delete" prefHeight="40.0" prefWidth="146.0" style="-fx-background-color: #DC143C;" text="Hapus" textFill="WHITE">
+               <font>
+                  <Font name="Agency FB Bold" size="18.0" />
+               </font></Button>
+            <TextField fx:id="txt_kodeBarang" layoutX="24.0" layoutY="90.0" onKeyReleased="#search_barang" prefHeight="31.0" prefWidth="146.0" promptText="Kode Barang" />
+            <TextField fx:id="txt_namaBarang" layoutX="24.0" layoutY="127.0" prefHeight="31.0" prefWidth="146.0" promptText="Nama Barang" />
+            <TextField fx:id="txt_kategori" layoutX="24.0" layoutY="164.0" prefHeight="31.0" prefWidth="146.0" promptText="Kategori" />
+            <TextField fx:id="txt_harga" layoutX="24.0" layoutY="201.0" prefHeight="31.0" prefWidth="146.0" promptText="Harga" />
+            <TextField fx:id="txt_stok" layoutX="24.0" layoutY="238.0" prefHeight="31.0" prefWidth="146.0" promptText="Stok" />
+            <Hyperlink fx:id="kembali1" layoutX="35.0" layoutY="31.0" text="Minimarketku" textFill="#c5fc7a">
+               <font>
+                  <Font name="Agency FB Bold" size="24.0" />
+               </font>
+            </Hyperlink>
+         </children>
+      </AnchorPane>
+      <TableView fx:id="table_barang" layoutX="228.0" layoutY="76.0" onMouseClicked="#getSelected" prefHeight="474.0" prefWidth="469.0">
+        <columns>
+          <TableColumn fx:id="kode_barang" prefWidth="75.0" text="Kode Barang" />
+          <TableColumn fx:id="nama_barang" prefWidth="75.0" text="Nama Barang" />
+            <TableColumn fx:id="harga" prefWidth="92.0" text="Harga" />
+            <TableColumn fx:id="stok" prefWidth="97.0" text="Stok" />
+            <TableColumn fx:id="kategori" prefWidth="115.0" text="Kategori" />
+        </columns>
+      </TableView>
+      <TextField fx:id="filterField" layoutX="350.0" layoutY="30.0" promptText="Cari" />
+      <Hyperlink fx:id="kembali" layoutX="228.0" layoutY="32.0" onAction="#kembali" text="Kembali" textFill="#4e4e50">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Hyperlink>
+   </children>
+</AnchorPane>

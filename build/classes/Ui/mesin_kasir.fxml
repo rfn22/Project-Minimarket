@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.web.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.collections.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="714.0" prefWidth="845.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.MesinKasirCotroller2">
+    <children>
+        <Label fx:id="label" layoutX="126" layoutY="120" minHeight="16" minWidth="69" />
+      <Label layoutX="216.0" layoutY="131.0" text="Kode Barang" />
+      <Label layoutX="216.0" layoutY="174.0" text="Jumlah" />
+      <TextField fx:id="txtkode" layoutX="317.0" layoutY="126.0" promptText="Masukkan Kode Barang" />
+      <TextField fx:id="txtjlh" layoutX="317.0" layoutY="169.0" promptText="Masukkan Jumlah" />
+      <TableView fx:id="table" layoutX="172.0" layoutY="299.0" prefHeight="279.0" onMouseClicked="#getSelected" prefWidth="622.0">
+        <columns>
+            <TableColumn fx:id="notable" prefWidth="75.0" text="No" />
+            <TableColumn fx:id="kodetable" prefWidth="140.0" text="Kode Barang" />
+            <TableColumn fx:id="namatable" minWidth="0.0" prefWidth="118.0" text="Nama Barang" />
+            <TableColumn fx:id="kategoritable" minWidth="0.0" prefWidth="118.0" text="Kategori" />
+            <TableColumn fx:id="jumlahtable" minWidth="0.0" prefWidth="60.0" text="Jumlah" />
+            <TableColumn fx:id="hargatable" prefWidth="109.0" text="Harga" />
+        </columns>
+      </TableView>
+      <Button fx:id="simpan" layoutX="317.0" layoutY="218.0" mnemonicParsing="false" onAction="#proses" style="-fx-background-color: #4e4e50;" text="Proses" textFill="WHITE">
+         <font>
+            <Font name="Agency FB Bold" size="15.0" />
+         </font></Button>
+      <Label layoutX="405.0" layoutY="259.0" style="-fx-label-padding: 5px;" text="Struk Pembayaran">
+         <font>
+            <Font name="Agency FB Bold" size="20.0" />
+         </font>
+      </Label>
+      <Label layoutX="414.0" layoutY="44.0" text="Mesin Kasir" textFill="#1a1a1a">
+         <font>
+            <Font name="Agency FB Bold" size="30.0" />
+         </font>
+      </Label>
+      <Label layoutX="295.0" layoutY="591.0" style="-fx-font-size: bold;" text="Total :">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Label>
+      <Pane prefHeight="714.0" prefWidth="150.0" style="-fx-background-color: #4e4e50;">
+         <children>
+            <Label layoutX="22.0" layoutY="24.0" />
+            <Label layoutX="14.0" layoutY="30.0" text="MinimarketKu" textFill="#c5fc7a">
+               <font>
+                  <Font name="Agency FB Bold" size="25.0" />
+               </font>
+            </Label>
+            <Hyperlink fx:id="home" layoutX="48.0" layoutY="122.0" onAction="#home" text="Home" textFill="#c5fc7a">
+               <font>
+                  <Font name="Agency FB Bold" size="18.0" />
+               </font>
+            </Hyperlink>
+            <Hyperlink fx:id="barang" layoutX="48.0" layoutY="155.0" onAction="#barang" text="Barang" textFill="WHITE">
+               <font>
+                  <Font name="Agency FB Bold" size="18.0" />
+               </font>
+            </Hyperlink>
+            <Hyperlink fx:id="logout" layoutX="48.0" layoutY="189.0" onAction="#logout" text="Logout" textFill="WHITE">
+               <font>
+                  <Font name="Agency FB Bold" size="18.0" />
+               </font>
+            </Hyperlink>
+         </children>
+      </Pane>
+      <Button fx:id="hapus" layoutX="448.0" layoutY="218.0" mnemonicParsing="false" onAction="#hapus" style="-fx-background-color: #FF0000;" text="Hapus" textFill="WHITE">
+         <font>
+            <Font name="Agency FB Bold" size="15.0" />
+         </font>
+      </Button>
+      <Label fx:id="total" layoutX="346.0" layoutY="593.0" text="0" />
+      <TextField fx:id="uang" onAction="#uang" layoutX="169.0" layoutY="586.0" prefHeight="31.0" prefWidth="94.0" promptText="ex: 100000" />
+      <Label layoutX="411.0" layoutY="591.0" style="-fx-font-size: bold;" text="Uang Kembalian :">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Label>
+      <Label fx:id="total1" layoutX="553.0" layoutY="593.0" text="0" />
+      <Button fx:id="save" layoutX="382.0" layoutY="218.0" mnemonicParsing="false" onAction="#save" style="-fx-background-color: #c5fc7a;" text="Simpan" textFill="WHITE">
+         <font>
+            <Font name="Agency FB Bold" size="15.0" />
+         </font>
+      </Button>
+    </children>
+</AnchorPane>
